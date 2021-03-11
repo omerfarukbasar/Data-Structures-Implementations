@@ -1,4 +1,4 @@
-# supreme-garbanzo
+# Data-Structures-Implementations
 This repository contains coursework for the Data Structures class.
 
 The data structures were provided by the professor. The main point of the
