@@ -1,0 +1,22 @@
+Programming Assignment #04 – Counting the Frequency of Letters
+Due:	Thursday, December 3rd at 5:00 PM
+You must upload a single ZIP file containing all of your JAVA source code files on the course Moodle site by due date.
+
+As we discussed in class, a Dictionary can be used to count the occurrence of words in a document.  Then it stands to reason that we could use it to count the occurrence of letters in a document as well.  Such an analysis can come in handy, for example, in the field of Cryptography, where the expected frequency of letters can be used to help crack a cipher.  For reference, this is the expected frequency of letters in the English language:
+
+Your task is to write a program that will use a Dictionary to count the number each English letter appears in a provided text file.  Your program should use a sorted Dictionary where the search keys are characters representing the 26 letters of the alphabet, and the values are integers representing the number each letter appears in the text file.  [Note: remember that each primitive has a wrapper object class – Character for char and Integer for int.]
+Your program should have at least the following three methods:
+1.	A method that takes in a text file and sets up the dictionary by adding the appropriate count for each letter.
+2.	A method that counts the total number of letters (i.e., the sum of all of the values currently in the Dictionary).
+3.	A method that prints out the contents of the dictionary, as well as the relative frequency of each letter (calculated as the count / total), expressed as a decimal.  For example, if there are 12 'E's and a total of 100 letters in the file, the line for E would look like:
+	E:		12		0.12
+Ground rules and Hints
+•	Download the template ZIP file that is on the Moodle.  It contains DictionaryInterface.java and the two sorted Dictionary implementations (from class).  It also includes data.txt, a sample text file you should read in.  These files should not be changed.
+•	When performing the count of the letters, you should only do 1 pass through of the text file.  This will require you to think carefully about how to initialize and then update counts for each letter.
+•	You should NOT maintain the total number of letters as a global/class variable.  This should be counted, using an Iterator, and returned by the 2nd method described above.
+•	Your print method (the 3rd method) should use the appropriate Iterator objects to go through the Dictionary.
+•	You can use a Scanner to read in text from a text file.  You can create a File object (import java.io.File) by passing the file name "data.txt" as a parameter to the constructor.  You can create the Scanner object by passing in the File object as a parameter (instead of System.in as you do for keyboard input). Make sure to include a catch block for the possible FileNotFoundException (import java.io.FileNotFoundException) that can be thrown when attempting to create a new File.
+•	Case should not matter.  To make it simpler, use the static toUpperCase method of the Character class to convert each letter to the upper case version.  You can ignore all non-letter characters by filtering out ASCII codes.  You only need to worry about characters with ASCII codes 65 ('A') to 90 ('Z'), inclusive.
+•	Check your output and confirm that it makes sense.  Compare the frequencies of each letter against the Table listed above and confirm that they are reasonable.  You can create other text files with random text grabbed from other sources and check their frequencies as well.
+•	Your program should be well organized and properly commented.
+•	This will require some amount of thought and planning before you code!  Do not just jump in otherwise you will waste time.
